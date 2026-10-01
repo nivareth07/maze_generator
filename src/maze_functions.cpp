@@ -12,6 +12,7 @@ Maze::Maze_object::Maze_object(int grid_size, int X, int Y, int c_size) {
   starting_X = X;
   starting_Y = Y;
   Cell_size = c_size;
+  visited_cells = 0;
 }
 
 std::mt19937 &rng() {

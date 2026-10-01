@@ -26,3 +26,17 @@ void render_cells(const Maze::Maze_object &main_maze,
     }
   }
 }
+void render_carving_index(const Maze::Maze_object &main_maze,
+                          std::pair<int, int> current_cell,
+                          SDL_Renderer *main_renderer) {
+  int Cell_size = main_maze.Cell_size;
+  int x0 = main_maze.starting_X + (current_cell.first * Cell_size);
+  int y0 = main_maze.starting_Y + (current_cell.second * Cell_size);
+  SDL_FRect rect;
+  rect.x = x0;
+  rect.y = y0;
+  rect.w = Cell_size;
+  rect.h = Cell_size;
+  SDL_SetRenderDrawColor(main_renderer, 0, 255, 0, 255);
+  SDL_RenderFillRect(main_renderer, &rect);
+}

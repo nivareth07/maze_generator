@@ -7,6 +7,7 @@ add_executable(maze_generator
   ./src/main.cpp
   ./src/maze_functions.cpp
   ./src/render.cpp
+  ./src/modes.cpp
 )
 target_link_libraries(maze_generator PRIVATE SDL3::SDL3)
 
